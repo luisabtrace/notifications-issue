@@ -9,14 +9,12 @@ export const App = () => {
   const dispatch = useDispatch();
 
   return (
-    <>
-      <button
-        onClick={() => {
-          dispatch(enqueueInfoNotification("Closing this notification will trigger the issue"));
-        }}
-      >
-        Click me!
-      </button>
-    </>
+    <button
+      onClick={() => {
+        dispatch(enqueueInfoNotification("Closing this notification will trigger the issue"));
+      }}
+    >
+      Click me!
+    </button>
   );
 };

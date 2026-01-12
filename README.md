@@ -13,21 +13,22 @@ $ yarn start:prod
 ```
 
 Open http://localhost:1212/ in your browser. You'll see a button. Click the
-button. A notification should popup. Close the notification by clicking the (X).
-The application should crash with:
+button. A notification should popup. Close the notification. The application
+should crash with:
 
 ```
-Uncaught TypeError: Cannot read properties of undefined (reading 'options')
-    at Se (TouchRipple.js:133:1)
-    at Object.get (TouchRipple.js:133:1)
-    at CircularProgress.js:57:1
+Cannot read properties of undefined (reading 'options')
+TypeError: Cannot read properties of undefined (reading 'options')
+    at we (http://localhost:1212/dist/renderer.dev.js:2:273722)
+    at Object.get (http://localhost:1212/dist/renderer.dev.js:2:272253)
+    at http://localhost:1212/dist/renderer.dev.js:2:225089
     at Proxy.findIndex (<anonymous>)
-    at CircularProgress.js:57:1
-    at TouchRipple.js:133:1
-    at produce (TouchRipple.js:133:1)
-    at TouchRipple.js:133:1
+    at http://localhost:1212/dist/renderer.dev.js:2:225060
+    at http://localhost:1212/dist/renderer.dev.js:2:285265
+    at produce (http://localhost:1212/dist/renderer.dev.js:2:275620)
+    at http://localhost:1212/dist/renderer.dev.js:2:285256
     at Array.reduce (<anonymous>)
-    at i (TouchRipple.js:133:1)
+    at i (http://localhost:1212/dist/renderer.dev.js:2:285173)
 ```
 
 This issue only occurs in a production build. For comparison, if you start the
