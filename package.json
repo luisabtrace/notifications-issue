@@ -1,0 +1,27 @@
+{
+  "name": "notifications-issue-demo",
+  "version": "1.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start:dev": "yarn copyfiles -u 1 src/index.html dist/ && cross-env NODE_ENV=development webpack-cli serve --mode development --config webpack.config.mjs",
+    "start:prod": "yarn copyfiles -u 1 src/index.html dist/ && cross-env NODE_ENV=production webpack-cli serve --mode production --config webpack.config.mjs"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "copyfiles": "2.4.1",
+    "cross-env": "10.1.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "5.9.3",
+    "webpack": "5.104.1",
+    "webpack-cli": "6.0.1",
+    "webpack-dev-server": "5.2.2"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "notistack": "^3.0.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-redux": "^9.2.0"
+  }
+}
